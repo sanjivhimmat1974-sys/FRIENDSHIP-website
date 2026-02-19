@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFF - Best Friends Forever 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="sparkles" id="sparkles"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="title-container">
+                <span class="title-icon">👫</span>
+                <h1 class="title">Best Friends Forever</h1>
+                <span class="title-icon">💕</span>
+            </div>
+            <p class="subtitle">A Tribute to Our Amazing Friendship</p>
+            <div class="hearts-row">
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💗</span>
+                <span class="floating-heart">💝</span>
+                <span class="floating-heart">💕</span>
+                <span class="floating-heart">💖</span>
+            </div>
+        </header>
+
+        <!-- BFF Photo Frame -->
+        <section class="photo-section">
+            <div class="photo-frame">
+                <div class="frame-inner">
+                    <div class="photo-placeholder">
+                        <span class="photo-icon">📸</span>
+                        <p>Add Your Photo Here</p>
+                    </div>
+                    <div class="frame-decorations">
+                        <span class="decoration top-left">✨</span>
+                        <span class="decoration top-right">💖</span>
+                        <span class="decoration bottom-left">💕</span>
+                        <span class="decoration bottom-right">✨</span>
+                    </div>
+                </div>
+            </div>
+            <div class="frame-caption">
+                <span class="caption-heart">💕</span>
+                <p>Together Forever</p>
+                <span class="caption-heart">💕</span>
+            </div>
+        </section>
+
+        <!-- Friendship Quiz -->
+        <section class="quiz-section">
+            <h2 class="section-title">🎯 Friendship Quiz</h2>
+            <div class="quiz-container" id="quizContainer">
+                <div class="quiz-card" id="quizCard">
+                    <div class="question" id="questionText">How well do you know me?</div>
+                    <div class="options" id="optionsContainer">
+                        <button class="option-btn" onclick="selectOption(0)">Super Well! 🌟</button>
+                        <button class="option-btn" onclick="selectOption(1)">Very Well! 💖</button>
+                        <button class="option-btn" onclick="selectOption(2)">Pretty Well! 💕</button>
+                        <button class="option-btn" onclick="selectOption(3)">Could Know Better 😅</button>
+                    </div>
+                    <div class="quiz-result" id="quizResult" style="display: none;">
+                        <div class="result-emoji" id="resultEmoji">💖</div>
+                        <div class="result-text" id="resultText">We know each other so well!</div>
+                        <button class="restart-btn" onclick="restartQuiz()">Play Again 🔄</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memory Lane -->
+        <section class="memories-section">
+            <h2 class="section-title">📖 Our Memory Lane</h2>
+            <div class="memories-timeline">
+                <div class="memory-card" data-year="2020">
+                    <div class="memory-icon">🎉</div>
+                    <div class="memory-content">
+                        <h3>We Met!</h3>
+                        <p>The day our beautiful friendship began ✨</p>
+                    </div>
+                </div>
+                <div class="memory-card" data-year="2021">
+                    <div class="memory-icon">🎂</div>
+                    <div class="memory-content">
+                        <h3> having  Together</h3>
+                        <p>Celebrating your special day! 🎂</p>
+                    </div>
+                </div>
+                <div class="memory-card" data-year="2022">
+                    <div class="memory-icon">🌟</div>
+                    <div class="memory-content">
+                        <h3>Best Memories</h3>
+                        <p>So many laughs and adventures shared 💫</p>
+                    </div>
+                </div>
+                <div class="memory-card" data-year="2023">
+                    <div class="memory-icon">💝</div>
+                    <div class="memory-content">
+                        <h3>Today & Forever</h3>
+                        <p>Thank you for being the best friend ever! 💖</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Friendship Calculator -->
+        <section class="calculator-section">
+            <h2 class="section-title">💕 Friendship Calculator</h2>
+            <div class="calculator-container">
+                <div class="calculator-inputs">
+                    <input type="text" id="yourName" placeholder="Your Name" class="name-input">
+                    <span class="plus-icon">+</span>
+                    <input type="text" id="friendName" placeholder="Friend's Name" class="name-input">
+                </div>
+                <button class="calculate-btn" onclick="calculateFriendship()">Calculate 💖</button>
+                <div class="result-display" id="resultDisplay" style="display: none;">
+                    <div class="result-percentage" id="resultPercentage">100%</div>
+                    <div class="result-message" id="resultMessage">Best Friends Forever! 💕</div>
+                    <div class="result-hearts">
+                        <span>💖</span><span>💕</span><span>💗</span><span>💝</span><span>💖</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons Why Section -->
+        <section class="reasons-section">
+            <h2 class="section-title">🌸 Why You're the Best</h2>
+            <div class="reasons-container">
+                <div class="reason-card">
+                    <span class="reason-icon">😊</span>
+                    <p>You always make me smile</p>
+                </div>
+                <div class="reason-card">
+                    <span class="reason-icon">🤗</span>
+                    <p>You're always there for me</p>
+                </div>
+                <div class="reason-card">
+                    <span class="reason-icon">😂</span>
+                    <p>You laugh at my jokes</p>
+                </div>
+                <div class="reason-card">
+                    <span class="reason-icon">💪</span>
+                    <p>You support all my dreams</p>
+                </div>
+                <div class="reason-card">
+                    <span class="reason-icon">🌟</span>
+                    <p>You're genuinely amazing</p>
+                </div>
+                <div class="reason-card">
+                    <span class="reason-icon">💕</span>
+                    <p>You're my person 💖</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Message -->
+        <section class="message-section">
+            <div class="special-message">
+                <div class="message-decoration">💝</div>
+                <h2>To My Best Friend,</h2>
+                <p class="message-text">
+                    Thank you for being the most amazing friend anyone could ask for. 
+                    You light up my days, make me laugh when I'm sad, and remind me 
+                    how precious friendship really is. Here's to many more adventures 
+                    together! 🌟💕
+                </p>
+                <div class="message-signature">
+                    
+                    <span class="signature-heart">💖</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>developed by mansi </p>
+            <div class="footer-hearts">
+                <span>💖</span><span>💕</span><span>💗</span><span>💝</span><span>💕</span><span>💖</span>
+            </div>
+        
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
